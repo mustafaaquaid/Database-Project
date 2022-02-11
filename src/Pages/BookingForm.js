@@ -2,20 +2,22 @@ import React from 'react'
 import './BookingForm.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import { useParams } from 'react-router-dom';
 
 function BookingForm(props) {
+  const prams = useParams();
   return (
     <div className='Formpage_body'>
         <Header />
         <div className='ticket_booking'>
             <div className='Flight_details'>
                 <div className='fromTo'>
-                <p><span>From: </span><i>Karachi</i></p>
-                <p><span>To:   </span><i>Sydney</i></p>
+                <p><span>From: </span><i>{ prams.from }</i></p>
+                <p><span>To:   </span><i>{ prams.to }</i></p>
                 </div>
                 <div className='rem_details'>
-                <p><span>Class: </span><i>Business</i></p>
-                <p><span>Fare:  </span><i>95500</i></p>
+                <p><span>Class: </span><i>{ prams.class }</i></p>
+                <p><span>Fare:  </span><i>{ prams.fare }</i></p>
                 </div>
             </div>
             <form>

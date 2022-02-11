@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Pages/Home.js';
+import BookNow from './Pages/BookNow.js';
+import BookingForm from './Pages/BookingForm';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+          <Routes>
+            <Route exact path="/" element={<Home/>}> </Route>
+            <Route exact path="/BookNow" element={<BookNow/>}> </Route>
+            <Route exact path="/BookNow/BookingForm/:from/:to/:class/:fare" element={<BookingForm/>}> </Route>
+          </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

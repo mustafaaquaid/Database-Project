@@ -8,6 +8,7 @@ import nt from './next_trip.jpg';
 import flexibility from './flexibility.jpg';
 import comfy from './comfy.jpg';
 import Footer from './Components/Footer.js';
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -35,13 +36,13 @@ function Home() {
       <p>Guaranteed flexibility to over</p>
         <p>140 Destinations</p>
         <div className='part1_span'><span>Fares From PKR 67,400</span></div>
-        <div className='part1_a'><a href='/BookNow'>Book now</a></div>
+        <div className='part1_a'><Link to='/BookNow'>Book now</Link></div>
       </div>
       <div className='Lists'>
         <ul className='List_part1'>
-          <li className='My_Trip'><a href='#' onClick={handleClick1}>My Trips</a></li>
-          <li className='Check_in'><a href='#'onClick={handleClick2}>Check-in</a></li>
-          <li className='Flight_Status'><a href='#' onClick={handleClick3}>Flight Status</a></li>
+          <li className='My_Trip'><Link to='/' onClick={handleClick1}>My Trips</Link></li>
+          <li className='Check_in'><Link to='/'onClick={handleClick2}>Check-in</Link></li>
+          <li className='Flight_Status'><Link to='/' onClick={handleClick3}>Flight Status</Link></li>
         </ul>
       </div>
       <div className='Lists_Connected'>

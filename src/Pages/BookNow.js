@@ -5,7 +5,7 @@ import Header from './Components/Header.js';
 import Pre_syd from './sydney_premium.jpg';
 import buss_syd from './sydney_business.jpg';
 import econ_syd from './sydney_economy.jpg';
-
+import { Link } from 'react-router-dom';
 
 function BookNow() {
   return <div className='BookNow_Body'>
@@ -20,9 +20,9 @@ function BookNow() {
         <img src={Pre_syd} alt="Sydney Pic"></img>
         <div className='Pre_tab'>
           <div className='Pre_button'>
-            <a href="/BookNow/BookingForm">
+            <Link to="/BookNow/BookingForm/Karachi/Sydney/Premium/125000">
             <button>Book Now</button>
-            </a>
+            </Link>
           </div>
           <h6>Sydney</h6>
           <span>24 Feb 2022</span>          
@@ -35,9 +35,9 @@ function BookNow() {
         <img src={buss_syd} alt="Sydney Pic"></img>
         <div className='norm_tab'>
           <div className='norm_button'>
-          <a href="#">
+            <Link to="/BookNow/BookingForm/Karachi/Sydney/Business/95000">
             <button>Book Now</button>
-          </a>
+            </Link>
           </div>
           <h6>Sydney</h6>
           <span>24 Feb 2022</span>          
@@ -50,9 +50,9 @@ function BookNow() {
         <img src={econ_syd} alt="Sydney Pic"></img>
         <div className='norm_tab'>
           <div className='norm_button'>
-          <a href="#">
+            <Link to="/BookNow/BookingForm/Karachi/Sydney/Economy/67500">
             <button>Book Now</button>
-          </a>
+            </Link>
           </div>
           <h6>Sydney</h6>
           <span>24 Feb 2022</span>          
